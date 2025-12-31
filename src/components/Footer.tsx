@@ -43,28 +43,26 @@ const Footer = () => {
             <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">Contact</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a
-                  href={`tel:${PHONE_NUMBER}`}
-                  className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground hover:text-primary transition-colors text-xs sm:text-sm touch-manipulation"
+                <button
+                  onClick={() => window.location.href = `tel:${PHONE_NUMBER}`}
+                  className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground hover:text-primary transition-colors text-xs sm:text-sm touch-manipulation cursor-pointer"
                 >
                   <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
                   +91 88665 57838
-                </a>
+                </button>
               </li>
               <li className="flex items-start gap-1.5 sm:gap-2 text-muted-foreground text-xs sm:text-sm">
                 <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 mt-0.5" />
                 <span>2nd Floor, Midway Height, Sayajiganj, Vadodara 390001</span>
               </li>
               <li>
-                <a
-                  href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground hover:text-primary transition-colors text-xs sm:text-sm touch-manipulation"
+                <button
+                  onClick={() => window.open(INSTAGRAM_URL, '_blank', 'noopener,noreferrer')}
+                  className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground hover:text-primary transition-colors text-xs sm:text-sm touch-manipulation cursor-pointer"
                 >
                   <Instagram className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
                   @thecavecafe
-                </a>
+                </button>
               </li>
             </ul>
           </div>
