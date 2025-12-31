@@ -10,18 +10,21 @@ const menuItems = [
     description: "Our signature pizza loaded with fresh paneer and veggies",
     image: foodPizza,
     tag: "Bestseller",
+    price: "₹180",
   },
   {
     name: "Gourmet Sandwiches",
     description: "Artisan bread with premium fillings and house sauces",
     image: foodSandwich,
     tag: "Popular",
+    price: "₹120",
   },
   {
     name: "Signature Coffee",
     description: "Expertly crafted coffee drinks for the perfect sip",
     image: coffeeImg,
     tag: "Must Try",
+    price: "₹80",
   },
 ];
 
@@ -69,9 +72,14 @@ const MenuHighlights = () => {
               </div>
               {/* Content */}
               <div className="p-4 sm:p-5 md:p-6">
-                <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-1 sm:mb-2">
-                  {item.name}
-                </h3>
+                <div className="flex items-start justify-between gap-2 mb-1 sm:mb-2">
+                  <h3 className="font-display text-lg sm:text-xl font-bold text-foreground">
+                    {item.name}
+                  </h3>
+                  <span className="text-primary font-bold text-sm sm:text-base shrink-0">
+                    {item.price}
+                  </span>
+                </div>
                 <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                   {item.description}
                 </p>

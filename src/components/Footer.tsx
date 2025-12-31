@@ -1,5 +1,8 @@
 import { Instagram, Phone, MapPin } from "lucide-react";
 
+const INSTAGRAM_URL = "https://www.instagram.com/thecavecafe/";
+const PHONE_NUMBER = "+918866557838";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -41,20 +44,20 @@ const Footer = () => {
             <ul className="space-y-2 sm:space-y-3">
               <li>
                 <a
-                  href="tel:+918866557838"
+                  href={`tel:${PHONE_NUMBER}`}
                   className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground hover:text-primary transition-colors text-xs sm:text-sm touch-manipulation"
                 >
                   <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
                   +91 88665 57838
                 </a>
               </li>
-              <li className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground text-xs sm:text-sm">
-                <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
-                Vadodara, Gujarat
+              <li className="flex items-start gap-1.5 sm:gap-2 text-muted-foreground text-xs sm:text-sm">
+                <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 mt-0.5" />
+                <span>2nd Floor, Midway Height, Sayajiganj, Vadodara 390001</span>
               </li>
               <li>
                 <a
-                  href="https://instagram.com"
+                  href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground hover:text-primary transition-colors text-xs sm:text-sm touch-manipulation"
