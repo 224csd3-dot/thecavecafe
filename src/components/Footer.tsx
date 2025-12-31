@@ -1,5 +1,4 @@
 import { Instagram, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
 
 const INSTAGRAM_URL = "https://www.instagram.com/the_cave_cafe/";
 const PHONE_NUMBER = "+918866557838";
@@ -13,7 +12,9 @@ const Footer = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Brand */}
           <div className="col-span-2">
-            <img src={logo} alt="The Cave Cafe" className="h-12 sm:h-14 w-auto mb-3" />
+            <h3 className="font-display text-xl sm:text-2xl font-bold text-gradient mb-2 sm:mb-3">
+              The Cave Cafe
+            </h3>
             <p className="text-muted-foreground max-w-md text-sm sm:text-base leading-relaxed">
               Vadodara's favorite destination for great food, cozy vibes, and 
               unforgettable moments. Join us for your next celebration or casual hangout.
