@@ -34,9 +34,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
-            <span className="font-display text-xl md:text-2xl font-bold text-gradient">
-              The Cave Cafe
+          <a href="#home" className="flex items-center gap-1">
+            <span className="font-display text-xl md:text-2xl font-bold">
+              <span className="text-foreground">THE</span>{" "}
+              <span className="text-primary">CAVE</span>{" "}
+              <span className="text-foreground">CAFE</span>
             </span>
           </a>
 

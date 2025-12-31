@@ -2,6 +2,24 @@ import { Star, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroCafe from "@/assets/hero-cafe.jpg";
 
+const CafeStatus = () => {
+  const now = new Date();
+  const hours = now.getHours();
+  const isOpen = hours >= 11 && hours < 21; // Open 11 AM to 9 PM
+
+  return isOpen ? (
+    <>
+      <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+      <span>Open Now • Closes at 9 PM</span>
+    </>
+  ) : (
+    <>
+      <div className="w-2 h-2 rounded-full bg-red-500" />
+      <span>Closed • Opens at 11 AM</span>
+    </>
+  );
+};
+
 const Hero = () => {
   return (
     <section
@@ -68,13 +86,15 @@ const Hero = () => {
 
           {/* Quick Info */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-muted-foreground animate-fade-up stagger-4 px-4">
-            <div className="flex items-center justify-center gap-2">
+            <button
+              onClick={() => window.open('https://maps.app.goo.gl/wo8myOkt9Z4AT4HK6', '_blank', 'noopener,noreferrer')}
+              className="flex items-center justify-center gap-2 hover:text-primary transition-colors cursor-pointer"
+            >
               <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
               <span>Vadodara, Gujarat</span>
-            </div>
+            </button>
             <div className="flex items-center justify-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span>Open Now • Closes at 9 PM</span>
+              <CafeStatus />
             </div>
           </div>
         </div>
