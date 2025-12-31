@@ -1,6 +1,6 @@
 import { Instagram, Phone, MapPin } from "lucide-react";
 
-const INSTAGRAM_URL = "https://www.instagram.com/thecavecafe/";
+const INSTAGRAM_URL = "https://www.instagram.com/the_cave_cafe/";
 const PHONE_NUMBER = "+918866557838";
 
 const Footer = () => {
@@ -61,7 +61,7 @@ const Footer = () => {
                   className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground hover:text-primary transition-colors text-xs sm:text-sm touch-manipulation cursor-pointer"
                 >
                   <Instagram className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
-                  @thecavecafe
+                  @THE_CAVE_CAFE
                 </button>
               </li>
             </ul>
