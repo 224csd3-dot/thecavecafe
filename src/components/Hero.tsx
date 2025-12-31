@@ -55,12 +55,15 @@ const Hero = () => {
                 View Menu
               </Button>
             </a>
-            <a href={`tel:+918866557838`} className="w-full sm:w-auto">
-              <Button variant="heroOutline" size="lg" className="w-full sm:w-auto sm:px-6">
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="text-sm sm:text-base">+91 88665 57838</span>
-              </Button>
-            </a>
+            <Button
+              variant="heroOutline"
+              size="lg"
+              className="w-full sm:w-auto sm:px-6"
+              onClick={() => window.location.href = 'tel:+918866557838'}
+            >
+              <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-sm sm:text-base">+91 88665 57838</span>
+            </Button>
           </div>
 
           {/* Quick Info */}

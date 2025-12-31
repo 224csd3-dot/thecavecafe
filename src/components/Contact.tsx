@@ -47,7 +47,11 @@ const Contact = () => {
                     <p className="text-xs sm:text-sm text-muted-foreground mb-0.5 sm:mb-1">Call Us</p>
                     <a
                       href={`tel:${PHONE_NUMBER}`}
-                      className="text-base sm:text-lg font-semibold text-foreground hover:text-primary transition-colors touch-manipulation"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = `tel:${PHONE_NUMBER}`;
+                      }}
+                      className="text-base sm:text-lg font-semibold text-foreground hover:text-primary transition-colors touch-manipulation cursor-pointer"
                     >
                       +91 88665 57838
                     </a>
@@ -90,14 +94,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-xs sm:text-sm text-muted-foreground mb-0.5 sm:mb-1">Follow Us</p>
-                    <a
-                      href={INSTAGRAM_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground font-semibold text-sm sm:text-base hover:text-primary transition-colors touch-manipulation"
+                    <button
+                      onClick={() => window.open(INSTAGRAM_URL, '_blank', 'noopener,noreferrer')}
+                      className="text-foreground font-semibold text-sm sm:text-base hover:text-primary transition-colors touch-manipulation cursor-pointer text-left"
                     >
                       @thecavecafe
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -110,36 +112,35 @@ const Contact = () => {
               </h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                <a href={`tel:${PHONE_NUMBER}`} className="block">
-                  <Button variant="hero" size="lg" className="w-full text-sm sm:text-base">
-                    <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                    Call Now
-                  </Button>
-                </a>
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="w-full text-sm sm:text-base"
+                  onClick={() => window.location.href = `tel:${PHONE_NUMBER}`}
+                >
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                  Call Now
+                </Button>
                 
-                <a
-                  href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
+                <Button
+                  variant="heroOutline"
+                  size="lg"
+                  className="w-full text-sm sm:text-base"
+                  onClick={() => window.open(INSTAGRAM_URL, '_blank', 'noopener,noreferrer')}
                 >
-                  <Button variant="heroOutline" size="lg" className="w-full text-sm sm:text-base">
-                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
-                    Instagram
-                  </Button>
-                </a>
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                  Instagram
+                </Button>
 
-                <a
-                  href={GOOGLE_MAPS_DIRECTIONS_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block sm:col-span-2"
+                <Button
+                  variant="heroOutline"
+                  size="lg"
+                  className="w-full text-sm sm:text-base sm:col-span-2"
+                  onClick={() => window.open(GOOGLE_MAPS_DIRECTIONS_URL, '_blank', 'noopener,noreferrer')}
                 >
-                  <Button variant="heroOutline" size="lg" className="w-full text-sm sm:text-base">
-                    <Navigation className="w-4 h-4 sm:w-5 sm:h-5" />
-                    Get Directions
-                  </Button>
-                </a>
+                  <Navigation className="w-4 h-4 sm:w-5 sm:h-5" />
+                  Get Directions
+                </Button>
               </div>
 
               {/* Services */}
