@@ -91,11 +91,11 @@ const MenuHighlights = () => {
         {/* CTA */}
         <div className="text-center animate-fade-up px-4">
           <p className="text-muted-foreground mb-3 sm:mb-4 text-sm sm:text-base">
-            Want to see our full menu? Get in touch!
+            Want to see our full menu with all items?
           </p>
-          <a href="#contact">
+          <a href="/menu">
             <Button variant="hero" size="default" className="sm:px-6">
-              Contact for Full Menu
+              View Full Menu
               <ArrowRight className="w-4 h-4" />
             </Button>
           </a>
