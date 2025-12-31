@@ -1,5 +1,12 @@
-import { Phone, Clock, MapPin, Instagram, MessageCircle } from "lucide-react";
+import { Phone, Clock, MapPin, Instagram, MessageCircle, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+const GOOGLE_MAPS_EMBED_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.169!2d73.1856!3d22.3119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5f0f0f0f0f0%3A0x0!2sThe%20Cave%20Cafe!5e0!3m2!1sen!2sin!4v1704067200000";
+const GOOGLE_MAPS_DIRECTIONS_URL = "https://www.google.com/maps/dir/?api=1&destination=The+Cave+Cafe,+2nd+floor,+Midway+Height,+opp.+SSG+Hospital,+near+Kala+Ghoda+Circle,+Sayajiganj,+Vadodara,+Gujarat+390001";
+const INSTAGRAM_URL = "https://www.instagram.com/thecavecafe/";
+const PHONE_NUMBER = "+918866557838";
+
+const FULL_ADDRESS = "2nd Floor, Midway Height, Opp. SSG Hospital, Near Kala Ghoda Circle, Dak Bunglaw, Sayajiganj, Vadodara, Gujarat 390001";
 
 const Contact = () => {
   return (
@@ -21,118 +28,157 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto">
-          {/* Contact Info Card */}
-          <div className="bg-gradient-card rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-border/50 shadow-card animate-fade-up">
-            <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
-              Contact Information
-            </h3>
-            
-            <div className="space-y-4 sm:space-y-6">
-              {/* Phone */}
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="p-2.5 sm:p-3 rounded-lg bg-primary/10 shrink-0">
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+        <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
+          {/* Left Column - Info & Actions */}
+          <div className="space-y-4 sm:space-y-6">
+            {/* Contact Info Card */}
+            <div className="bg-gradient-card rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-border/50 shadow-card animate-fade-up">
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
+                Contact Information
+              </h3>
+              
+              <div className="space-y-4 sm:space-y-5">
+                {/* Phone */}
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2.5 sm:p-3 rounded-lg bg-primary/10 shrink-0">
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-0.5 sm:mb-1">Call Us</p>
+                    <a
+                      href={`tel:${PHONE_NUMBER}`}
+                      className="text-base sm:text-lg font-semibold text-foreground hover:text-primary transition-colors touch-manipulation"
+                    >
+                      +91 88665 57838
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs sm:text-sm text-muted-foreground mb-0.5 sm:mb-1">Call Us</p>
-                  <a
-                    href="tel:+918866557838"
-                    className="text-base sm:text-lg font-semibold text-foreground hover:text-primary transition-colors touch-manipulation"
-                  >
-                    +91 88665 57838
-                  </a>
-                </div>
-              </div>
 
-              {/* Hours */}
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="p-2.5 sm:p-3 rounded-lg bg-primary/10 shrink-0">
-                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                {/* Hours */}
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2.5 sm:p-3 rounded-lg bg-primary/10 shrink-0">
+                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-0.5 sm:mb-1">Opening Hours</p>
+                    <p className="text-foreground font-semibold text-sm sm:text-base">
+                      Open Daily
+                    </p>
+                    <p className="text-muted-foreground text-xs sm:text-sm">
+                      Closes at 9:00 PM
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs sm:text-sm text-muted-foreground mb-0.5 sm:mb-1">Opening Hours</p>
-                  <p className="text-foreground font-semibold text-sm sm:text-base">
-                    Open Daily
-                  </p>
-                  <p className="text-muted-foreground text-xs sm:text-sm">
-                    Closes at 9:00 PM
-                  </p>
-                </div>
-              </div>
 
-              {/* Location */}
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="p-2.5 sm:p-3 rounded-lg bg-primary/10 shrink-0">
-                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                {/* Location */}
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2.5 sm:p-3 rounded-lg bg-primary/10 shrink-0">
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-0.5 sm:mb-1">Location</p>
+                    <p className="text-foreground font-semibold text-sm sm:text-base leading-relaxed">
+                      {FULL_ADDRESS}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs sm:text-sm text-muted-foreground mb-0.5 sm:mb-1">Location</p>
-                  <p className="text-foreground font-semibold text-sm sm:text-base">
-                    Vadodara, Gujarat
-                  </p>
+
+                {/* Instagram */}
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2.5 sm:p-3 rounded-lg bg-primary/10 shrink-0">
+                    <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-0.5 sm:mb-1">Follow Us</p>
+                    <a
+                      href={INSTAGRAM_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground font-semibold text-sm sm:text-base hover:text-primary transition-colors touch-manipulation"
+                    >
+                      @thecavecafe
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Social Links */}
-            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-border/50">
-              <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">Follow us on</p>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors touch-manipulation text-sm sm:text-base"
-              >
-                <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span>@thecavecafe</span>
-              </a>
+            {/* Quick Actions Card */}
+            <div className="bg-gradient-card rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-border/50 shadow-card animate-fade-up stagger-2">
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
+                Quick Actions
+              </h3>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <a href={`tel:${PHONE_NUMBER}`} className="block">
+                  <Button variant="hero" size="lg" className="w-full text-sm sm:text-base">
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                    Call Now
+                  </Button>
+                </a>
+                
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button variant="heroOutline" size="lg" className="w-full text-sm sm:text-base">
+                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                    Instagram
+                  </Button>
+                </a>
+
+                <a
+                  href={GOOGLE_MAPS_DIRECTIONS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block sm:col-span-2"
+                >
+                  <Button variant="heroOutline" size="lg" className="w-full text-sm sm:text-base">
+                    <Navigation className="w-4 h-4 sm:w-5 sm:h-5" />
+                    Get Directions
+                  </Button>
+                </a>
+              </div>
+
+              {/* Services */}
+              <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-border/50">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">Available Services</p>
+                <div className="flex flex-wrap gap-2">
+                  {["Dine-in", "Takeaway", "Delivery"].map((service) => (
+                    <span
+                      key={service}
+                      className="px-2.5 sm:px-3 py-1 rounded-full bg-secondary text-xs sm:text-sm text-foreground border border-border/50"
+                    >
+                      {service}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Quick Actions Card */}
-          <div className="bg-gradient-card rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-border/50 shadow-card animate-fade-up stagger-2">
-            <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
-              Quick Actions
-            </h3>
-            
-            <p className="text-muted-foreground mb-6 sm:mb-8 text-sm sm:text-base">
-              Ready to experience The Cave Cafe? Reach out to us directly or message us on Instagram.
-            </p>
-
-            <div className="space-y-3 sm:space-y-4">
-              <a href="tel:+918866557838" className="block">
-                <Button variant="hero" size="lg" className="w-full text-sm sm:text-base">
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Call Now
-                </Button>
-              </a>
-              
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
-                <Button variant="heroOutline" size="lg" className="w-full text-sm sm:text-base">
-                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Message on Instagram
-                </Button>
-              </a>
-            </div>
-
-            {/* Services */}
-            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-border/50">
-              <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">Available Services</p>
-              <div className="flex flex-wrap gap-2">
-                {["Dine-in", "Takeaway", "Delivery"].map((service) => (
-                  <span
-                    key={service}
-                    className="px-2.5 sm:px-3 py-1 rounded-full bg-secondary text-xs sm:text-sm text-foreground border border-border/50"
-                  >
-                    {service}
-                  </span>
-                ))}
+          {/* Right Column - Map */}
+          <div className="animate-fade-up stagger-3">
+            <div className="bg-gradient-card rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-border/50 shadow-card h-full">
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 px-2">
+                Find Us Here
+              </h3>
+              <div className="relative rounded-lg sm:rounded-xl overflow-hidden aspect-square lg:aspect-auto lg:h-[calc(100%-60px)]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.169!2d73.1856!3d22.3119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5f0f0f0f0f0%3A0x0!2sThe%20Cave%20Cafe%2C%20Sayajiganj%2C%20Vadodara!5e0!3m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: "350px" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="The Cave Cafe Location"
+                  className="w-full h-full"
+                />
+                {/* Map overlay for styling */}
+                <div className="absolute inset-0 pointer-events-none border border-primary/20 rounded-lg sm:rounded-xl" />
               </div>
             </div>
           </div>

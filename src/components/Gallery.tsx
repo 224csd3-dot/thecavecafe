@@ -73,7 +73,7 @@ const Gallery = () => {
             Follow us for more delicious moments
           </p>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/thecavecafe/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary hover:text-amber-glow transition-colors font-semibold text-sm sm:text-base touch-manipulation"
