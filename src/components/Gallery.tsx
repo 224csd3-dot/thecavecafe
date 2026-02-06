@@ -73,7 +73,7 @@ const Gallery = () => {
             Follow us for more delicious moments
           </p>
           <button
-            onClick={() => window.open('https://www.instagram.com/the_cave_cafe/', '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open('https://www.instagram.com/the_cave_cafe_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank', 'noopener,noreferrer')}
             className="inline-flex items-center gap-2 text-primary hover:text-amber-glow transition-colors font-semibold text-sm sm:text-base touch-manipulation cursor-pointer"
           >
             <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">

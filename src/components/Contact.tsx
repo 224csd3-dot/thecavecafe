@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const GOOGLE_MAPS_EMBED_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.169!2d73.1856!3d22.3119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5f0f0f0f0f0%3A0x0!2sThe%20Cave%20Cafe!5e0!3m2!1sen!2sin!4v1704067200000";
 const GOOGLE_MAPS_DIRECTIONS_URL = "https://www.google.com/maps/dir/?api=1&destination=The+Cave+Cafe,+2nd+floor,+Midway+Height,+opp.+SSG+Hospital,+near+Kala+Ghoda+Circle,+Sayajiganj,+Vadodara,+Gujarat+390001";
-const INSTAGRAM_URL = "https://www.instagram.com/the_cave_cafe/";
+const INSTAGRAM_URL = "https://www.instagram.com/the_cave_cafe_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
 const PHONE_NUMBER = "+918866557838";
 
 const FULL_ADDRESS = "2nd Floor, Midway Height, Opp. SSG Hospital, Near Kala Ghoda Circle, Dak Bunglaw, Sayajiganj, Vadodara, Gujarat 390001";

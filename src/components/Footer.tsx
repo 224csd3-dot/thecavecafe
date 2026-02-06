@@ -1,6 +1,6 @@
 import { Instagram, Phone, MapPin } from "lucide-react";
 
-const INSTAGRAM_URL = "https://www.instagram.com/the_cave_cafe/";
+const INSTAGRAM_URL = "https://www.instagram.com/the_cave_cafe_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
 const PHONE_NUMBER = "+918866557838";
 
 const Footer = () => {
